@@ -1,0 +1,167 @@
+     
+
+        .link-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .link-input {
+            flex: 1;
+            background: linear-gradient(135deg, #8b5cf6, #a855f7, #c084fc);
+            border-radius: 50px;
+            padding: 16px 24px;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            outline: none;
+        }
+
+        .link-input::placeholder {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .copy-btn {
+            background: white;
+            border: 2px solid #8b5cf6;
+            border-radius: 12px;
+            padding: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 48px;
+            height: 48px;
+        }
+
+        .copy-btn:hover {
+            background: #8b5cf6;
+            transform: translateY(-1px);
+        }
+
+        .copy-btn:hover .copy-icon {
+            stroke: white;
+        }
+
+        .copy-icon {
+            width: 20px;
+            height: 20px;
+            stroke: #8b5cf6;
+            transition: stroke 0.2s ease;
+        }
+
+        .content-area {
+            padding: 32px;
+        }
+
+        .qr-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            border: 4px solid #8b5cf6;
+            border-radius: 16px;
+            background: white;
+            padding: 12px;
+            flex-shrink: 0;
+        }
+
+        .qr-pattern {
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="white"/><rect x="0" y="0" width="20" height="20" fill="black"/><rect x="0" y="80" width="20" height="20" fill="black"/><rect x="80" y="0" width="20" height="20" fill="black"/><rect x="30" y="30" width="10" height="10" fill="black"/><rect x="50" y="30" width="10" height="10" fill="black"/><rect x="70" y="30" width="10" height="10" fill="black"/><rect x="10" y="50" width="10" height="10" fill="black"/><rect x="30" y="50" width="10" height="10" fill="black"/><rect x="50" y="50" width="10" height="10" fill="black"/><rect x="70" y="50" width="10" height="10" fill="black"/><rect x="90" y="50" width="10" height="10" fill="black"/><rect x="10" y="70" width="10" height="10" fill="black"/><rect x="30" y="70" width="10" height="10" fill="black"/><rect x="50" y="70" width="10" height="10" fill="black"/><rect x="70" y="70" width="10" height="10" fill="black"/><rect x="90" y="70" width="10" height="10" fill="black"/></svg>') no-repeat center;
+            background-size: contain;
+            border-radius: 8px;
+        }
+
+        .instruction-text {
+            font-size: 18px;
+            color: #6c757d;
+            line-height: 1.6;
+            max-width: 400px;
+        }
+
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #28a745;
+            color: white;
+            padding: 16px 16px;
+            border-radius: 8px;
+            font-weight: 500;
+            transform: translateX(400px);
+            transition: transform 5s ease;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 20px;
+            }
+
+            .title {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            .content-area {
+                padding: 20px;
+            }
+
+            .qr-section {
+                flex-direction: column;
+                gap: 24px;
+                text-align: center;
+            }
+
+            .qr-code {
+                width: 160px;
+                height: 160px;
+                margin: 0 auto;
+            }
+
+            .instruction-text {
+                font-size: 16px;
+                max-width: 100%;
+            }
+
+            .link-container {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .copy-btn {
+                width: 100%;
+                height: 56px;
+                border-radius: 50px;
+                font-weight: 500;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .qr-section {
+                gap: 30px;
+            }
+
+            .qr-code {
+                width: 180px;
+                height: 180px;
+            }
+        }
