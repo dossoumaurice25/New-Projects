@@ -6185,9 +6185,7 @@
   <body>
 
      <!-- ======== Preloader =========== -->
-    <div id="preloader">
-      <div class="spinner"></div>
-    </div>
+    
     <!-- ======== Preloader =========== -->
 
     @include('layouts.users.components.aside')
