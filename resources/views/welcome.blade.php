@@ -779,9 +779,9 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6 text-center">
-                    <div class="qr-code mx-auto">
+                    <!--<div class="qr-code mx-auto">
                        <img src="{{asset('assets/images/qr.png')}}" alt="Qr code" height="200" width="200" style="border-radius: 40px">
-                    </div>
+                    </div>-->
                     <h3 class="mt-4">To join us you must be invited because <span style="color: var(--primary-purple);">NovaPulse</span> is an invitation-only platform.</h3>
                 </div>
             </div>
