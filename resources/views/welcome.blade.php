@@ -16,6 +16,12 @@
             font-style: normal;
         }
         @font-face {
+            font-family: 'Milano';
+            src: url('/assets/font/GC-Milano-Demo-BF68a4207fe35f9.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
             font-family: 'Original';
             src: url('/assets/fonts/Original-BF688471e2a3005.ttf') format('truetype');
             src: url('/assets/fonts/Original-BF688471e2a9abd.woff') format('woff');
@@ -60,7 +66,7 @@
 
             .particle {
             position: absolute;
-            background: radial-gradient(circle, #a023c233 0%, #bbb0be36 50%, transparent 100%);
+            background: radial-gradient(circle, #666166 0%, #972cb5bc 50%, transparent 100%);
             border-radius: 50%;
             animation: float-particle 8s ease-in-out infinite;
             }
@@ -550,7 +556,7 @@
     <section id="home" class="hero-section" style="background-image: url('assets/images/B-NOVA.png');background-size: cover;background-repeat: no-repeat;background-position: center;">
         <div class="container">
                 <div class="particles-container" id="particlesContainer"></div>
-                <div class="align-items-center justify-content-center" style="margin-top: 200px; margin-bottom: 200px;">
+                <div class="align-items-center justify-content-center" style="margin-top: 50px; margin-bottom: 200px;">
                         <img class="hero-logo img-fluid" src="{{asset('assets/images/prelog.png')}}" alt="logo NovaPulse">
                         <!--<h1 class="hero-title" style="font-family:'Allrion' , serif;">B-NOVA</h1>-->
                         <img class="hero-logo img-fluid" src="{{asset('assets/images/logonov.png')}}" alt="logo NovaPulse">
@@ -564,7 +570,7 @@
         <div class="container " >
             <div class="row justify-content-center " >
                 <div class="col-lg-7">
-                    <h3 class="" style="font-family:'Allrion' , serif;">About NovaPulse</h3>
+                    <h3 class="" style="font-family:'Milano' , serif;">About NovaPulse</h3>
                     <div class="mb-5" style="width: 100px; height: 3px;background-color: #9f23c2;"></div>
                     <h3 class="mb-4" style="color: var(--primary-purple);">Invest differently, Profit sustainably.</h3>
                     <p class="lead mb-4">
@@ -584,7 +590,7 @@
      <!-- How it works Section -->
     <section id="how" class="how-it-works" >
         <div class="container">
-            <h3 style="font-family:'Allrion' , serif;" class="">How it works</h3>
+            <h3 style="font-family:'Milano' , serif;" class="">How it works</h3>
             <div class="mb-5" style="width: 100px; height: 3px;background-color: #9f23c2;"></div>
             <div class="row justify-content-center">
                 <div class="col-lg-6 mb-4">
@@ -633,7 +639,7 @@
         <div class="container " >
             <div class="row justify-content-center " >
                 <div class="col-lg-6">
-                    <h3 class="" style="font-family:'Allrion' , serif;">Security & Transparency</h3>
+                    <h3 class="" style="font-family:'Milano' , serif;">Security & Transparency</h3>
                     <div class="mb-5" style="width: 100px; height: 3px;background-color: #9f23c2;"></div>
                     <p class="lead mb-4">
                         At NovaPulse, the security of your funds and the transparency of our operations are our top priority. <br>
@@ -658,7 +664,7 @@
     <!-- Why Choose Us Section -->
     <section id="join" class="py-5">
         <div class="container">
-            <h3 class="" style="font-family:'Allrion' , serif;">Why choose us</h3>
+            <h3 class="" style="font-family:'Milano' , serif;">Why choose us</h3>
             <div class="mb-5" style="width: 100px; height: 3px;background-color: #9f23c2;"></div>
             <div class="row text-center">
 
@@ -714,7 +720,7 @@
     <!--FAQ -->
     <section class="py-5">
         <div class="container accordion accordion-flush" id="accordionFlushExample">
-            <h3 class="" style="font-family:'Allrion' , serif;">FAQ</h3>
+            <h3 class="" style="font-family:'Milano' , serif;">Frequently Asked Questions</h3>
             <div class="mb-5" style="width: 100px; height: 3px;background-color: #9f23c2;"></div>
             <div class="accordion-item" style="background-color: #e8ceef;">
                 <h2 class="accordion-header"  >
