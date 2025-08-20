@@ -67,7 +67,6 @@
   <div class="flex items-center justify-center min-h-screen px-4">
     <div class="w-full max-w-lg glow-card p-8 text-white">
       <div class="text-center mb-6">
-        <img src="{{asset('assets/images/logo/logo5.png')}}" alt="logo" height="120" width="200" style="margin-left: 120px" />
         <div class="align-items-center justify-content-center gap-2 mb-0">
             <h1 style="font-family: 'Batangas', sans-serif; font-size: 2.5rem;" class="display-6 fw-bold mb-0 text-white">NovaPu<span style="font-family: 'Batangas', sans-serif; color:#9f23c2">l</span>se</h1>
         </div>
