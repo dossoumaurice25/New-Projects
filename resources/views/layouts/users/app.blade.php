@@ -14,8 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <link rel="icon" href="favicon.ico" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('assets/css/lineicons.css')}}" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">    <link rel="stylesheet" href="{{asset('assets/css/lineicons.css')}}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="{{asset('assets/css/materialdesignicons.min.css')}}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="{{asset('assets/css/fullcalendar.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/css/fullcalendar.css')}}" />
@@ -77,7 +76,7 @@
     <!-- ======== main-wrapper end =========== -->
 
      <!-- ========= All Javascript files linkup ======== -->
-    <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script src="{{asset('assets/js/Chart.min.js')}}"></script>
     <script src="{{asset('assets/js/dynamic-pie-chart.js')}}"></script>
     <script src="{{asset('assets/js/moment.min.js')}}"></script>
