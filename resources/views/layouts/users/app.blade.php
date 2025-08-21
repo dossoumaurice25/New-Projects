@@ -2719,7 +2719,7 @@
           z-index: 99;
         }
         .header .header-left .menu-toggle-btn .main-btn {
-          padding: 8px 8px;
+          padding: 10px 16px;
           border-radius: 8px;
           display: flex;
           align-items: center;
