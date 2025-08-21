@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovaPulse - Investment Platform</title>
+    <title>NovaPulse</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://db.onlinewebfonts.com/c/88ec722aea6da3c9f67189591d5f3a6e?family=Batangas" rel="stylesheet">
@@ -519,14 +519,482 @@
             }
         }
 
+    </style>
+
+    <style>
+        :root {
+            --primary-purple: #9f23c2;
+            --secondary-purple: #7C3AED;
+            --light-purple: #C4B5FD;
+            --gradient: linear-gradient(135deg, var(--primary-purple), var(--secondary-purple));
+        }
+        
+        .faq-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .faq-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient);
+        }
+        
+        .faq-header {
+            background: var(--gradient);
+            color: white;
+            padding: 3rem 0 4rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .faq-header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-top: 30px solid var(--secondary-purple);
+        }
+        
+        .faq-title {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .faq-content {
+            padding: 4rem 0;
+        }
+        
+        .accordion-item {
+            border: none;
+            margin-bottom: 1.5rem;
+            border-radius: 16px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .accordion-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+        }
+        
+        .accordion-button {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: none;
+            padding: 1.5rem 2rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #1e293b;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background: var(--gradient);
+            color: white;
+            box-shadow: none;
+        }
+        
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.2rem rgba(159, 35, 194, 0.25);
+        }
+        
+        .accordion-button::after {
+            background-image: none;
+            font-family: 'Font Awesome 6 Free';
+            content: '\f067';
+            font-weight: 900;
+            width: auto;
+            height: auto;
+            background-size: auto;
+            transition: all 0.3s ease;
+        }
+        
+        .accordion-button:not(.collapsed)::after {
+            content: '\f068';
+            color: white;
+        }
+        
+        .accordion-body {
+            padding: 2rem;
+            background: linear-gradient(135deg, #fefefe 0%, #f8fafc 100%);
+            color: #475569;
+            font-size: 1rem;
+            line-height: 1.6;
+            border-top: 1px solid var(--light-purple);
+        }
+        
+        .brand-name {
+            background: linear-gradient(135deg, var(--light-purple), white);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+        
+        .question-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            margin: 0 auto 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .faq-title {
+                font-size: 2rem;
+            }
+            
+            .accordion-button {
+                padding: 1.2rem 1.5rem;
+                font-size: 1rem;
+            }
+            
+            .accordion-body {
+                padding: 1.5rem;
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        .fade-in:nth-child(1) { animation-delay: 0.1s; }
+        .fade-in:nth-child(2) { animation-delay: 0.2s; }
+        .fade-in:nth-child(3) { animation-delay: 0.3s; }
+        .fade-in:nth-child(4) { animation-delay: 0.4s; }
+        .fade-in:nth-child(5) { animation-delay: 0.5s; }
+        .fade-in:nth-child(6) { animation-delay: 0.6s; }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <style>
+        :root {
+            --primary-purple: #9f23c2;
+            --secondary-purple: #7C3AED;
+            --light-purple: #C4B5FD;
+            --gradient: linear-gradient(135deg, var(--primary-purple), var(--secondary-purple));
+            --dark-gradient: linear-gradient(135deg, #621578aa, #16213e);
+        }
+        /* Section d'invitation */
+        .invitation-section {
+            background: linear-gradient(185deg, #151515 50%, #972cb5bc 100%);
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+
+        }
+        
+        .invitation-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.3;
+            z-index: 1;
+        }
+        
+        .invitation-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .invitation-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            margin: 0 auto 2rem;
+            box-shadow: 0 10px 25px -5px rgba(159, 35, 194, 0.4);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 10px 25px -5px rgba(159, 35, 194, 0.4);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 15px 35px -5px rgba(159, 35, 194, 0.6);
+            }
+        }
+        
+        .invitation-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #ffffff;
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+        }
+        
+        .brand-highlight {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+        
+        .invitation-subtitle {
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 400;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
         /* Footer */
         .footer {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 2rem 0;
-            border-top: 1px solid rgba(139, 92, 246, 0.3);
-            text-align: center;
+            background:black;
+            color: white;
+            position: relative;
+            overflow: hidden;
         }
-
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient);
+        }
+        
+        .footer-main {
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-brand {
+            margin-bottom: 2rem;
+        }
+        
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 700;            
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-description {
+            color: #cbd5e1;
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 350px;
+        }
+        
+        .footer-section h5 {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-links a:hover {
+            color: var(--light-purple);
+            transform: translateX(5px);
+        }
+        
+        .footer-links a i {
+            margin-right: 0.5rem;
+            width: 16px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .social-link:hover {
+            background: var(--gradient);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px -5px rgba(159, 35, 194, 0.4);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem 0;
+            margin-top: 0.5rem;
+        }
+        
+        .footer-bottom .row {
+            align-items: center;
+        }
+        
+        .copyright {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        .footer-legal-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .footer-legal-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .footer-legal-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient);
+            transition: width 0.3s ease;
+        }
+        
+        .footer-legal-links a:hover {
+            color: var(--light-purple);
+        }
+        
+        .footer-legal-links a:hover::after {
+            width: 100%;
+        }
+        
+        .security-badge {
+            background: var(--dark-gradient);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .security-icon {
+            font-size: 2rem;
+            color: var(--light-purple);
+            margin-bottom: 1rem;
+        }
+        
+        .security-text {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            line-height: 1.5;
+        }
+        
+        @media (max-width: 768px) {
+            .invitation-title {
+                font-size: 1.5rem;
+            }
+            
+            .footer-main {
+                padding: 3rem 0 1.5rem;
+            }
+            
+            .footer-legal-links {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+                margin-top: 1rem;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+        }
+        
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease forwards;
+        }
+        
+        .fade-up:nth-child(1) { animation-delay: 0.1s; }
+        .fade-up:nth-child(2) { animation-delay: 0.2s; }
+        .fade-up:nth-child(3) { animation-delay: 0.3s; }
+        .fade-up:nth-child(4) { animation-delay: 0.4s; }
+        
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
@@ -722,73 +1190,103 @@
         <div class="container accordion accordion-flush" id="accordionFlushExample">
             <h3 class="" style="font-family:'Milano' , serif;">Frequently Asked Questions</h3>
             <div class="mb-5" style="width: 100px; height: 3px;background-color: #9f23c2;"></div>
-            <div class="accordion-item" style="background-color: #e8ceef;">
-                <h2 class="accordion-header"  >
-                <button class="accordion-button collapsed" type="button" style="background-color: #a023c293; font-weight: bold;" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    What is <span style="font-family: 'Batangas', sans-serif; margin-left:5px">NovaPu<span style="font-family: 'Batangas', sans-serif; color:#9f23c2">l</span>se</span> ?
-                </button>
-                </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">NovaPulse is a secure online platform that makes it easy to invest and track your returns in real time.</div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    How can I subscribe to NovaPulse?
-                </button>
-                </h2>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">NovaPulse is an invitation-only platform</div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    Which deposit methods are accepted?
-                </button>
-                </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">We accept secure methods, such as Cryptocurrencies (Bitcoin, USDT, Ethereum...)</div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFor" aria-expanded="false" aria-controls="flush-collapseFor">
-                    How do I track my investments?
-                </button>
-                </h2>
-                <div id="flush-collapseFor" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">From your dashboard, you can view your deposits, winnings, withdrawals and transaction history in real time.</div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                    Can I withdraw my winnings at any time?
-                </button>
-                </h2>
-                <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Yes, you can request a withdrawal at any time depending on the payment method you have chosen.</div>
+            
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="accordion accordion-flush" id="faqAccordion">
+                        <div class="accordion-item" style="background-color: #e8ceef;">
+                            <h2 class="accordion-header"  >
+                            <button class="accordion-button collapsed" type="button" style="background-color: #a023c293; font-weight: bold;" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <i class="fas fa-rocket me-3" style="color: var(--primary-purple);"></i>
+                                What is <span style="font-family: 'Batangas', sans-serif; margin-left:5px">NovaPu<span style="font-family: 'Batangas', sans-serif; color:#9f23c2">l</span>se</span> ?
+                            </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"> 
+                                <i class="fas fa-shield-alt me-2" style="color: var(--secondary-purple);"></i>
+                                NovaPulse is a secure online platform that makes it easy to invest and track your returns in real time. 
+                                Our advanced technology allows you to manage your portfolio with confidence and transparency.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <i class="fas fa-user-plus me-3" style="color: var(--primary-purple);"></i>
+                                How can I subscribe to NovaPulse?
+                            </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <i class="fas fa-envelope me-2" style="color: var(--secondary-purple);"></i>
+                                NovaPulse is an invitation-only platform. This approach enables us to maintain a superior, personalized service for each and every one of our members.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <i class="fas fa-credit-card me-3" style="color: var(--primary-purple);"></i>
+                                Which deposit methods are accepted?
+                            </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <i class="fab fa-bitcoin me-2" style="color: var(--secondary-purple);"></i>
+                                We accept secure methods, including cryptocurrencies (Bitcoin, USDT, Ethereum...). All transactions are protected by bank-level encryption.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFor" aria-expanded="false" aria-controls="flush-collapseFor">
+                                <i class="fas fa-chart-line me-3" style="color: var(--primary-purple);"></i>
+                                How do I track my investments?
+                            </button>
+                            </h2>
+                            <div id="flush-collapseFor" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <i class="fas fa-tachometer-alt me-2" style="color: var(--secondary-purple);"></i>
+                                From your intuitive dashboard, you can view your deposits, winnings, withdrawals and complete transaction history in real time, with detailed graphs and powerful analyses.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                <i class="fas fa-money-bill-wave me-3" style="color: var(--primary-purple);"></i>
+                                Can I withdraw my winnings at any time?
+                            </button>
+                            </h2>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"> 
+                                <i class="fas fa-clock me-2" style="color: var(--secondary-purple);"></i>
+                                Yes, you can request a withdrawal at any time depending on the payment method you have chosen. Our withdrawal processes are fast and secure for your peace of mind.</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         
     </section>
 
-    
 
-    
 
-    <!-- QR Code Section -->
-    <section class="qr-section">
+
+    <!-- Section d'invitation -->
+    <section class="invitation-section">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-6 text-center">
-                    <!--<div class="qr-code mx-auto">
-                       <img src="{{asset('assets/images/qr.png')}}" alt="Qr code" height="200" width="200" style="border-radius: 40px">
-                    </div>-->
-                    <h3 class="mt-4">To join us you must be invited because <span style="color: var(--primary-purple);">NovaPulse</span> is an invitation-only platform.</h3>
+                <div class="col-lg-8 text-center">
+                    <div class="invitation-content">
+                        <div class="invitation-icon">
+                            <i class="fas fa-envelope-open"></i>
+                        </div>
+                        <h3 class="invitation-title">
+                            To join us, you need to be invited, as <strong style="font-family: 'Batangas', sans-serif; color: #ffffff;">NovaPu<span style="font-family: 'Batangas', sans-serif; color:#9f23c2">l</span>se</strong> is an invitation-only platform.
+                        </h3>
+                        <p class="invitation-subtitle">
+                            A selective approach that enables us to offer a personalized, high-quality investment service to our privileged community.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -797,20 +1295,143 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>&copy; 2025 NovaPulse. Tous droits réservés.</p>
+            <!-- Section principale du footer -->
+            <div class="footer-main">
+                <div class="row">
+                    <!-- Branding et description -->
+                    <div class="col-lg-4 col-md-6 mb-4 fade-up">
+                        <div class="footer-brand">
+                            <h4 class="footer-logo"><strong style="font-family: 'Batangas', sans-serif; color: #ffffff;">NovaPu<span style="font-family: 'Batangas', sans-serif; color:#9f23c2">l</span>se</strong></h4>
+                            <p class="footer-description">
+                                A secure, exclusive investment platform offering innovative solutions for growing your assets with transparency and performance.
+                            </p>
+                            <div class="social-links">
+                                <a href="#" class="social-link" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Telegram">
+                                    <i class="fab fa-telegram-plane"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Discord">
+                                    <i class="fab fa-discord"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Services -->
+                    <div class="col-lg-2 col-md-6 mb-4 fade-up">
+                        <div class="footer-section">
+                            <h5>Services</h5>
+                            <ul class="footer-links">
+                                <li><a href="#"><i class="fas fa-chart-line"></i>Investment</a></li>
+                                <li><a href="#"><i class="fas fa-wallet"></i>Portfolio</a></li>
+                                <li><a href="#"><i class="fas fa-analytic"></i>Analytics</a></li>
+                                <li><a href="#"><i class="fas fa-shield-alt"></i>Security</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Support -->
+                    <div class="col-lg-2 col-md-6 mb-4 fade-up">
+                        <div class="footer-section">
+                            <h5>Support</h5>
+                            <ul class="footer-links">
+                                <li><a href="#"><i class="fas fa-question-circle"></i>FAQ</a></li>
+                                <li><a href="#"><i class="fas fa-headset"></i>Contact</a></li>
+                                <li><a href="#"><i class="fas fa-book"></i>Guides</a></li>
+                                <li><a href="#"><i class="fas fa-life-ring"></i>Assistance</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Sécurité -->
+                    <div class="col-lg-4 col-md-6 mb-4 fade-up">
+                        <div class="security-badge">
+                            <div class="security-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="security-text">
+                                <strong>Maximum Safety</strong><br>
+                                256-bit SSL bank encryption<br>
+                                Regulatory compliance<br>
+                                Protected customer funds
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 text-end">
-                    <a href="#" class="text-light me-3">General terms and conditions</a>
-                    <a href="#" class="text-light">Privacy policy</a>
+            </div>
+            
+            <!-- Section bottom du footer -->
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="copyright">
+                            &copy; 2025 NovaPulse. All rights reserved. 
+                            <span style="color: var(--light-purple);">Investing involves risk.</span>
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="footer-legal-links">
+                            <a href="#">General terms and conditions</a>
+                            <a href="#">Privacy policy</a>
+                            <a href="#">Legal information</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
+    
+
+
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    
+
+        // Effet hover sur les items accordion
+        document.querySelectorAll('.accordion-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Son d'ouverture/fermeture (optionnel)
+        document.querySelectorAll('.accordion-button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Ajouter un effet visuel subtil
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+        });
+    </script>
+
+    <script>
+
+        // Animation des liens sociaux
+        document.querySelectorAll('.social-link').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px) rotate(5deg)';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) rotate(0deg)';
+            });
+        });
+    </script>
     
     <!-- Custom JavaScript -->
     <script>
