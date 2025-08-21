@@ -131,7 +131,7 @@
                     <div class="row align-items-center">
                     <div class="col-md-6">
                         <div class="title">
-                        <h2>B-NOVA Wallet</h2>
+                        <h2>Wallet</h2>
                         </div>
                     </div>
                     <!-- end col -->
@@ -143,7 +143,7 @@
                                 <a href="{{route('User.dashboard')}}">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                B-NOVA Wallet 
+                                Wallet 
                             </li>
                             </ol>
                         </nav>
